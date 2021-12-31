@@ -60,15 +60,7 @@ android {
     dataBinding {
         enabled true
     }
-
     ndkVersion '23.0.7599858'
-
-    applicationVariants.all { variant ->
-        variant.javaCompileProvider.get().doLast {
-            runAllatori(variant)
-        }
-    }
-
 }
 
 dependencies {
@@ -91,30 +83,4 @@ dependencies {
 	implementation 'co.lujun:androidtagview:1.0.2'
     implementation 'commons-io:commons-io:2.10.0'
     implementation 'io.github.medyo:android-about-page:2.0.0'
-}
-
-def runAllatori(variant) {
-    copy {
-        from "$projectDir/allatori.xml"
-        into "$buildDir/intermediates/classes/"
-        expand(classesRoot: variant.javaCompileProvider.get().destinationDir,
-                kotlinRoot: "${buildDir}/tmp/kotlin-classes/${variant.name}",
-                androidJar: "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar",
-                classpathJars: variant.javaCompileProvider.get().classpath.getAsPath(),
-                logFile: "allatori-log-${variant.name}.xml")
-        rename('allatori.xml', "allatori-${variant.name}.xml")
-    }
-
-    new File("${variant.javaCompileProvider.get().destinationDir}-obfuscated").deleteDir()
-    javaexec {
-        main = 'com.allatori.Obfuscate'
-        classpath = files("$rootDir/lib/allatori.jar")
-        args "$buildDir/intermediates/classes/allatori-${variant.name}.xml"
-    }
-    new File("${variant.javaCompileProvider.get().destinationDir}").deleteDir()
-    new File("${variant.javaCompileProvider.get().destinationDir}-obfuscated").renameTo(new File("${variant.javaCompileProvider.get().destinationDir}"))
-
-    // Kotlin support
-    //new File("${buildDir}/tmp/kotlin-classes/${variant.name}").deleteDir()
-    //new File("${buildDir}/tmp/kotlin-classes/${variant.name}-obfuscated").renameTo(new File("${buildDir}/tmp/kotlin-classes/${variant.name}"))
 }
