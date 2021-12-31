@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--below line is to create preference category-->
+    <PreferenceCategory android:title="General">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="autologin"
+            android:summary="Si esta funcion esta activada, cada vez que abras la app vas a comprobar si hay actualizaciones o cambios de los datos guardados"
+            android:title="Comprobacion automatica" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Cuenta">
+        <Preference
+            android:key="resetdb"
+            android:title="Resetear los datos"
+            android:summary="Vas a borrar todos los datos guardados y tus ganacias generadas" />
+        <Preference
+            android:key="logauth"
+            android:title="Cerrar Sesion"
+            android:summary="Vas a cerrar sesion de tu cuenta" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Notificaciones">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="productntf"
+            android:summary="Vas a recibir una notificacion de los productos escasos que su cantidad sea minima de 5"
+            android:title="Productos escasos" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

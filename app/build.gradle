@@ -1,0 +1,120 @@
+plugins {
+    id 'com.android.application'
+}
+apply plugin: 'com.chrisney.enigma'
+
+enigma.enabled = true
+enigma.injectFakeKeys = true
+
+android {
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    compileSdkVersion 30
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.mrz.austock"
+        minSdkVersion 24
+        //noinspection OldTargetApi
+        targetSdkVersion 30
+        versionCode 347
+        versionName "3.4.7"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+		externalNativeBuild {
+            cmake {
+                cFlags "-fvisibility=hidden"
+                cppFlags "-fvisibility=hidden"
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+	
+	externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+	
+    dataBinding {
+        enabled true
+    }
+
+    ndkVersion '23.0.7599858'
+
+    applicationVariants.all { variant ->
+        variant.javaCompileProvider.get().doLast {
+            runAllatori(variant)
+        }
+    }
+
+}
+
+dependencies {
+    implementation 'com.pusher:pusher-java-client:2.2.6'
+    implementation 'com.pusher:pusher-http-java:1.0.0'
+    implementation 'com.heinrichreimersoftware:material-intro:2.0.0'
+    implementation 'gun0912.ted:tedpermission:2.2.3'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+    implementation 'com.journeyapps:zxing-android-embedded:4.2.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'pub.devrel:easypermissions:0.2.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+	implementation 'co.lujun:androidtagview:1.0.2'
+    implementation 'commons-io:commons-io:2.10.0'
+    implementation 'io.github.medyo:android-about-page:2.0.0'
+}
+
+def runAllatori(variant) {
+    copy {
+        from "$projectDir/allatori.xml"
+        into "$buildDir/intermediates/classes/"
+        expand(classesRoot: variant.javaCompileProvider.get().destinationDir,
+                kotlinRoot: "${buildDir}/tmp/kotlin-classes/${variant.name}",
+                androidJar: "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar",
+                classpathJars: variant.javaCompileProvider.get().classpath.getAsPath(),
+                logFile: "allatori-log-${variant.name}.xml")
+        rename('allatori.xml', "allatori-${variant.name}.xml")
+    }
+
+    new File("${variant.javaCompileProvider.get().destinationDir}-obfuscated").deleteDir()
+    javaexec {
+        main = 'com.allatori.Obfuscate'
+        classpath = files("$rootDir/lib/allatori.jar")
+        args "$buildDir/intermediates/classes/allatori-${variant.name}.xml"
+    }
+    new File("${variant.javaCompileProvider.get().destinationDir}").deleteDir()
+    new File("${variant.javaCompileProvider.get().destinationDir}-obfuscated").renameTo(new File("${variant.javaCompileProvider.get().destinationDir}"))
+
+    // Kotlin support
+    //new File("${buildDir}/tmp/kotlin-classes/${variant.name}").deleteDir()
+    //new File("${buildDir}/tmp/kotlin-classes/${variant.name}-obfuscated").renameTo(new File("${buildDir}/tmp/kotlin-classes/${variant.name}"))
+}

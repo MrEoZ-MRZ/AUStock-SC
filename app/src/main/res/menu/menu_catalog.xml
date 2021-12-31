@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MainActivity">
+
+    <item
+        android:id="@+id/action_insert_dummy_data"
+        android:title="@string/action_insert_dummy_data"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/config"
+        android:title="Configuracion"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/descargar"
+        android:title="@string/action_save"
+        android:icon="@android:drawable/stat_sys_download_done"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/guardar"
+        android:title="@string/action_save"
+        android:icon="@android:drawable/ic_menu_save"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/historial"
+        android:title="Acceder a historial de ventas"
+        android:icon="@android:drawable/ic_menu_agenda"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/about"
+        android:title="Sobre AUStock"
+        app:showAsAction="never" />
+
+</menu>

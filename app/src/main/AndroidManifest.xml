@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mrz.austock">
+
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".AUStockAPP"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_app_splash"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:preserveLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_app_splash"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <service
+            android:name=".activity.AdminService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service
+            android:name=".activity.Notification"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="TODO"
+            tools:ignore="ExportedService">
+        </service>
+
+        <activity
+            android:name=".activity.AboutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.Expenses.ExpenseActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/EditorTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="IntentFilterExportedReceiver,LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.DetailActivity"
+            android:label="@string/app_product_details"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/EditorTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activity.EditorActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/EditorTheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <provider
+            android:name=".data.ProductProvider"
+            android:authorities="com.mrz"
+            android:exported="false" />
+    </application>
+
+</manifest>

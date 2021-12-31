@@ -1,0 +1,279 @@
+<resources>
+
+    <string name="app_name">AUStock</string>
+
+    <!-- Label for detail activity -->
+    <string name="app_product_details">Detalles del producto</string>
+
+    <!-- Label for detail menu option to edit the current product[CHAR LIMIT=20]-->
+    <string name="action_edit">Editar</string>
+
+    <!-- Label for editor menu option to save product and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Guardar</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="categorySpinnerPrompt">Select Category</string>
+    <string-array name="categoryArray">
+        <item>Category 1</item>
+        <item>Category 2</item>
+        <item>Category 3</item>
+    </string-array>
+
+    <!-- Label for editor overflow menu option that deletes the current product [CHAR LIMIT=20] -->
+    <string name="action_delete">Borrar</string>
+
+    <!-- Label for overflow menu option that inserts fake product data into the app [CHAR LIMIT=20] -->
+    <string name="action_insert_dummy_data">Insertar un producto</string>
+
+    <!-- Label for overflow menu option that deletes all product data in the app [CHAR LIMIT=20] -->
+    <string name="action_delete_all_entries">Eliminar todos los productos</string>
+
+    <!-- Title for the activity to add a new product [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_new_product">Añadir un producto</string>
+
+    <!-- Title for the activity to edit an existing product [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_edit_product">Editar un producto</string>
+
+    <!-- Label for product name information in the editor [CHAR LIMIT=30] -->
+    <string name="category_product_name">Nombre del producto</string>
+
+    <!-- Label for product title in the editor [CHAR LIMIT=30] -->
+    <string name="category_product_title">Título</string>
+
+    <!-- Label for product publisher in the editor [CHAR LIMIT=30] -->
+    <string name="category_product_price">Precio</string>
+
+    <!-- Label for product isbn in the editor [CHAR LIMIT=30] -->
+    <string name="category_product_isbn">Codigo</string>
+
+    <!-- Label for product price information in the editor [CHAR LIMIT=30] -->
+    <string name="category_price">Precio</string>
+
+    <!-- Label for product quantity information in the editor [CHAR LIMIT=30] -->
+    <string name="category_quantity">Cantidad</string>
+
+    <!-- Label for supplier name information in the editor [CHAR LIMIT=30] -->
+    <string name="category_supplier_name">Nombre de la proovedor</string>
+
+    <!-- Label for supplier email information in the editor [CHAR LIMIT=30] -->
+    <string name="category_supplier_email">Correo electronico de la proovedor</string>
+
+    <!-- Label for supplier phone information in the editor [CHAR LIMIT=30] -->
+    <string name="category_supplier_phone">Numero de la proovedor</string>
+
+    <!-- Label for supplier name information in the detail activity [CHAR LIMIT=20] -->
+    <string name="category_name">Nombre</string>
+
+    <!-- Label for supplier email information in the detail activity [CHAR LIMIT=20] -->
+    <string name="category_email">Correo electronico</string>
+
+    <!-- Label for supplier phone information in the detail activity [CHAR LIMIT=20] -->
+    <string name="category_phone">Telefono</string>
+
+    <!-- Text for the button -->
+    <string name="add_image">Imagen</string>
+
+    <!-- Toast message in detail activity to ensure that no negative quantities display -->
+    <string name="detail_update_zero_quantity">Te has quedado sin stock</string>
+
+    <!-- Toast message in editor when new product has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_product_successful">Producto guardado</string>
+
+    <!-- Toast message in editor when new product has failed to be inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_product_failed">Error al guardar el producto</string>
+
+    <!-- Toast message in editor when current product was successfully updated [CHAR LIMIT=NONE] -->
+    <string name="editor_update_product_successful">Producto actualizado</string>
+
+    <!-- Toast message in editor when current product has failed to be updated [CHAR LIMIT=NONE] -->
+    <string name="editor_update_product_failed">Error al actualizar el producto</string>
+
+    <!-- Title text for the empty view [CHAR LIMIT=50] -->
+    <string name="empty_view_title_text">No tienes ningun producto &#8230;</string>
+
+    <!-- Subtitle text for the empty view that prompts the user to add a product [CHAR LIMIT=50] -->
+    <string name="empty_view_subtitle_text">Importa los datos de tu tienda desde las opciones o clickea al + y agrega tu producto</string>
+
+    <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
+    <string name="unsaved_changes_dialog_msg">¿Descartar los cambios y dejar de editar?</string>
+
+    <!-- Dialog button text for the option to discard a user's changes [CHAR LIMIT=20] -->
+    <string name="discard">Descartar</string>
+
+    <!-- Dialog button text for the option to keep editing the current product [CHAR LIMIT=20] -->
+    <string name="keep_editing">Seguir editando</string>
+
+    <!-- Toast message in editor when current product was successfully deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_product_successful">Producto eliminado</string>
+
+    <!-- Toast message in editor when current product has failed to be deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_product_failed">Error al eliminar el producto</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current product [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">¿Eliminar este producto?</string>
+
+    <!-- Dialog button text for the option to confirm deleting the current product [CHAR LIMIT=20] -->
+    <string name="delete">Borrar</string>
+
+    <!-- Dialog button text for the option to cancel deletion of the current product [CHAR LIMIT=20] -->
+    <string name="cancel">Cancelar</string>
+
+    <!-- Dialog message to ask the user to confirm deleting all products [CHAR LIMIT=NONE] -->
+    <string name="delete_all_dialog_msg">¿Eliminar todos los productos?</string>
+
+    <!-- Dialog message to ask the user to use ISBN when adding a product [CHAR LIMIT=NONE] -->
+    <string name="add_by_isbn_dialog_msg">¿Añadir un producto por su codigo QR?</string>
+
+    <!-- Dialog button text for the option to enter an ISBN -->
+    <string name="enter_an_isbn">Escanear codigo RQ</string>
+
+    <!-- Dialog button text for the option to add a product manually -->
+    <string name="add_manually">Añadir manualmente</string>
+
+    <!-- Order email message -->
+    <string name="email_subject">Orden por mas productos</string>
+    <string name="place_an_order">Me gustaría hacer un pedido para</string>
+    <string name="period">.</string>
+    <string name="copies_of"></string>
+    <string name="best"></string>
+    <string name="colon">:</string>
+    <string name="compose_email">Escribir correo</string>
+    <string name="mailto">mailto:</string>
+    <string name="n">\n</string>
+    <string name="nn">\n\n</string>
+
+    <!-- Content description of the image -->
+    <string name="content_desc">Imagen del producto</string>
+    <string name="content_desc_email">imagen de correo electrónico</string>
+    <string name="content_desc_phone">imagen del teléfono</string>
+
+    <!-- String for the supplier text view -->
+    <string name="supplier">Proveedor</string>
+
+    <!-- Toast message in detail activity when the user granted phone call permission -->
+    <string name="permission_granted">Permiso concedido</string>
+    <!-- Toast message in detail activity when the user denied phone call permission -->
+    <string name="permission_denied">Permiso denegado</string>
+
+    <!-- Toast message for the input validation in editor activity -->
+    <string name="empty_product_name">El título no puede estar vacío.</string>
+    <string name="empty_product_author">El autor no puede estar vacío.</string>
+    <string name="empty_product_isbn">El codigo RQ no puede estar vacío</string>
+    <string name="empty_product_price">El precio no puede estar vacío</string>
+    <string name="empty_product_quantity">La cantidad no puede estar vacía</string>
+    <string name="empty_supplier_name">El nombre del proveedor no puede estar vacío</string>
+    <string name="empty_supplier_phone">El número de teléfono del proveedor no puede estar vacío</string>
+
+    <!-- Toast message when a user do not enter the 13 digit ISBN in MainActivity -->
+    <string name="enter_13_digit_isbn">Ingrese el RQ de 13 dígitos</string>
+
+    <!--Text input layout error message -->
+    <string name="error_product_name">Ingrese un título válido.</string>
+    <string name="error_product_isbn">Ingrese un codigo RQ válido.</string>
+    <string name="error_product_price">Por favor ingrese un precio válido.</string>
+    <string name="error_product_quantity">Ingrese una cantidad válida.</string>
+    <string name="error_supplier_name">Ingrese un nombre de proveedor válido.</string>
+    <string name="error_supplier_phone">Ingrese un número de teléfono de proveedor válido.</string>
+
+    <!-- Text of the sale button -->
+    <string name="sell">Vender</string>
+    <string name="sold_out">SIN STOCK</string>
+
+    <!-- String for the Extra key name -->
+    <string name="title">título</string>
+    <string name="qrcode">RQ</string>
+    <string name="provider">Marca</string>
+    <string name="isbn_in_a_dialog">RQ en dialogo</string>
+
+    <!-- Title for the intent in the pickImageFromGallery -->
+    <string name="select_picture">Seleccionar imagen</string>
+    <!-- image type in the pickImageFromGallery -->
+    <string name="image_all_format">image/*</string>
+
+    <!-- String for the phone intent -->
+    <string name="tel_colon">tel:</string>
+
+    <!-- String for the query "isbn:" -->
+    <string name="query_isbn">RQ:</string>
+    <!-- String for the query parameter -->
+    <string name="q">q</string>
+
+    <string name="no_matches_found">No se encontraron coincidencias.</string>
+    <string name="no_internet_connection">Estas desconectado. Por favor revisa tu Internet conexión.</string>
+
+    <!-- Intent title -->
+    <string name="make_a_phone_call">Hacer una llamada telefónica</string>
+
+    <string name="currency">$</string>
+
+    <string-array name="pref_upload_quality_entries">
+        <item>360p</item>
+        <item>480p</item>
+        <item>720p</item>
+        <item>1080p</item>
+        <item>Original</item>
+    </string-array>
+
+    <string-array name="pref_remind_me_to_take_a_break">
+        <item>1 hours</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>5 hours</item>
+        <item>10 hours</item>
+    </string-array>
+
+    <string-array name="pref_seek_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="pref_duration">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="pref_uploads">
+        <item>Only when on Wi-Fi</item>
+        <item>On any network</item>
+    </string-array>
+
+    <string name="menu_settings">Settings</string>
+    <string name="menu_remind">Recordarmelo en 5 segundos</string>
+    <string name="menu_fake_add">Añadir informacion falsa</string>
+    <string name="menu_clear_data">Eliminar toda la informacion?</string>
+
+    <string name="empty_message">No hay movimientos recientes.</string>
+
+    <string name="ask_expense_delete">Eliminar este historial?</string>
+    <string name="yes_expense_delete">Si</string>
+    <string name="no_expense_delete">No</string>
+
+    <string name="create_expense_button">Crear</string>
+    <string name="delete_expense_button">Borrar</string>
+    <string name="update_expense_button">Actualizar</string>
+    <string name="cancel_expense_button">Cancelar</string>
+
+    <string name="expense_form_amount_hint">Cantidad</string>
+    <string name="expense_form_amount_error">"Coloca una cantidad valida."</string>
+    <string name="expense_form_category_hint">Categoria</string>
+    <string name="expense_form_uncategorized">Sin categoria</string>
+    <string name="expense_form_description_hint">Descripcion</string>
+
+    <string name="expense_summary_view_title">Cantidad</string>
+
+    <string name="notification_title">Hey there!</string>
+    <string name="notification_text">Do not forget to add your expenses.</string>
+
+    <string name="preferences_alarm_key">useAlarm</string>
+    <string name="preferences_alarm_title">Reminder</string>
+    <string name="preferences_alarm_summary">Remind me every night to add my expenses.</string>
+</resources>

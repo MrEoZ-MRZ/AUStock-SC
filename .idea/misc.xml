@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/MrEoZ/AndroidStudioProjects/AUStock/app/src/main/res/layout/adminservice.xml" value="0.1" />
+        <entry key="..\:/Users/MrEoZ/AndroidStudioProjects/AUStock/app/src/main/res/menu/menu_catalog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/drawable-xhdpi/list_divider.xml" value="0.2203125" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/drawable/button_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/drawable/ic_success.xml" value="0.2203125" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/activity_editor.xml" value="0.17889492753623187" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/activity_expenses.xml" value="0.1" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/activity_historial.xml" value="0.16" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/activity_tab.xml" value="0.9" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/adminservice.xml" value="0.33" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/alertdialog.xml" value="0.22" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/card_item.xml" value="0.18" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/content_main.xml" value="0.18" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/fragment_analysis.xml" value="0.18" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/fragment_expense_item.xml" value="0.22" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/fragment_expense_list.xml" value="0.25" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/fragment_transaction.xml" value="0.18" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/list_item_layout.xml" value="0.1" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/listview_expense_header.xml" value="0.1" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/layout/listview_expense_item.xml" value="0.1" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/menu/menu_catalog.xml" value="0.25" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/menu/menu_editor.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/menu/menu_expenses.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Nazareno Busi/AndroidStudioProjects/AUStock/app/src/main/res/xml/prefrences.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
